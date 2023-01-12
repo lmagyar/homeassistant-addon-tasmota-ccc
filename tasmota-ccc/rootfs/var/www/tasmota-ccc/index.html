@@ -1,0 +1,36 @@
+
+<style>
+body {
+    margin: 0;
+}
+.toolbar {
+    height: 55px;
+    padding-top: 0px;
+    padding-right: 16px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+.icon {
+    height: 24px;
+    width: 24px;
+    padding: 16;
+    color: rgba(33, 33, 33, .6)
+}
+iframe {
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 56px);
+    width: 100%;
+}
+</style>
+
+<body>
+    <div class="toolbar">
+        <img class="icon" src="list.png" alt="Devices" onclick="document.getElementById('main').src = 'devices.html';">
+        <img class="icon" src="update.png" alt="Update">
+    </div>
+    <iframe id="main" src="devices.html"></iframe>
+</body>
