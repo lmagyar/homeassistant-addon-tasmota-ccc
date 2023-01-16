@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Bump base image to 13.1.0
+
 ## 0.1.2
 
 - Disable browser caching
