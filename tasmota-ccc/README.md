@@ -110,7 +110,7 @@ SOFTWARE.
 [license-shield]: https://img.shields.io/github/license/lmagyar/homeassistant-addon-tasmota-ccc.svg
 [lmagyar]: https://github.com/lmagyar
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-custom-orange.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-orange.svg
 [releases-shield]: https://img.shields.io/github/tag/lmagyar/homeassistant-addon-tasmota-ccc.svg?label=release
 [releases]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/tags
 [screenshot]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/raw/main/images/screenshot.png
