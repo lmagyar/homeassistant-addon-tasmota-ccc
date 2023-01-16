@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Disable browser caching
+
 ## 0.1.1
 
 - Select specifically the Tasmota integration's devices
