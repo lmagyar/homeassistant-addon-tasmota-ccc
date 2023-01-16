@@ -4,10 +4,10 @@
                 <table>
                     <tr>
                         <td rowspan="2">
-                            <img src="tasmota.png" alt="Tasmota" width="32" height="32">
+                            <img src="tasmota_unavailable.png" alt="Tasmota" width="32" height="32">
                         </td>
                         <td>
-                            <a href="webui/{{ .id }}/"><b>{{ .name }}</b></a>
+                            <p style="color:darkgrey"><b>{{ .name }}</b></p>
                         </td>
                     </tr>
                     <tr>

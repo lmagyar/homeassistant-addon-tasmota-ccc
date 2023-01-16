@@ -104,13 +104,13 @@ SOFTWARE.
 [github-actions-shield]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/workflows/Publish/badge.svg
 [github-actions]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/actions
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
-[installations-shield]: https://img.shields.io/badge/dynamic/json?label=reported%20installations&query=$[%27b12a1ee6-tasmota-ccc%27].total&url=https%3A%2F%2Fanalytics.home-assistant.io%2Faddons.json
+[installations-shield]: https://img.shields.io/badge/dynamic/json?label=reported%20installations&query=$[%27b12a1ee6_tasmota_ccc%27].total&url=https%3A%2F%2Fanalytics.home-assistant.io%2Faddons.json
 [issue]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/issues
 [licence]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/blob/main/LICENSE
 [license-shield]: https://img.shields.io/github/license/lmagyar/homeassistant-addon-tasmota-ccc.svg
 [lmagyar]: https://github.com/lmagyar
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2023.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-custom-orange.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-orange.svg
 [releases-shield]: https://img.shields.io/github/tag/lmagyar/homeassistant-addon-tasmota-ccc.svg?label=release
 [releases]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/tags
 [screenshot]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/raw/main/images/screenshot.png
