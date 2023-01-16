@@ -17,31 +17,46 @@ bashio::var.json \
         -template /etc/nginx/templates/nginx.gtpl \
         -out /etc/nginx/nginx.conf
 
-# Generate Proxy configurations
-echo "<body><table align="center">" > /var/www/tasmota-ccc/devices.html
-get_tasmota_devices | jq -rcM "sort_by(.name) | .[]" | while read device; do
-    # id, available, name, model, version, area, url, mac
-    eval "declare -A device_attributes=($(bashio::jq "${device}" 'to_entries | .[] | @sh "[\(.key)]=\(.value)"'))"
+# Generate Proxy configurations and static html
+devices=$(get_tasmota_devices)
+if (( $(echo "${devices}" | jq length) == 0 )); then
+    cp /var/www/tasmota-ccc/templates/no_devices.html /var/www/tasmota-ccc/devices.html
+else
+    echo "<body><table align="center">" > /var/www/tasmota-ccc/devices.html
+    echo "${devices}" | jq -rcM "sort_by(.name) | .[]" | while read device; do
+        # id, available, name, model, version, area, url, mac
+        eval "declare -A device_attributes=($(bashio::jq "${device}" 'to_entries | .[] | @sh "[\(.key)]=\(.value)"'))"
 
-    bashio::var.json \
-        id "${device_attributes[id]}" \
-        url "${device_attributes[url]}" \
-        | tempio \
-            -template /etc/nginx/templates/device_proxy.gtpl \
-            -out /etc/nginx/locations/device_proxy_"${device_attributes[id]}".conf
-
-    bashio::var.json \
-        id "${device_attributes[id]}" \
-        name "${device_attributes[name]}" \
-        area "${device_attributes[area]}" \
-        model "${device_attributes[model]}" \
-        version "${device_attributes[version]}" \
-        | tempio \
-            -template /var/www/tasmota-ccc/templates/device.gtpl \
-            -out /tmp/device.html
-    cat /tmp/device.html >> /var/www/tasmota-ccc/devices.html
-done
-echo "</table></body>" >> /var/www/tasmota-ccc/devices.html
+        if [[ "${device_attributes[available]}" == "false" ]]; then
+            bashio::var.json \
+                name "${device_attributes[name]}" \
+                area "${device_attributes[area]}" \
+                model "${device_attributes[model]}" \
+                version "${device_attributes[version]}" \
+                | tempio \
+                    -template /var/www/tasmota-ccc/templates/device_unavailable.gtpl \
+                    -out /tmp/device.html
+        else
+            bashio::var.json \
+                id "${device_attributes[id]}" \
+                url "${device_attributes[url]}" \
+                | tempio \
+                    -template /etc/nginx/templates/device_proxy.gtpl \
+                    -out /etc/nginx/locations/device_proxy_"${device_attributes[id]}".conf
+            bashio::var.json \
+                id "${device_attributes[id]}" \
+                name "${device_attributes[name]}" \
+                area "${device_attributes[area]}" \
+                model "${device_attributes[model]}" \
+                version "${device_attributes[version]}" \
+                | tempio \
+                    -template /var/www/tasmota-ccc/templates/device.gtpl \
+                    -out /tmp/device.html
+        fi
+        cat /tmp/device.html >> /var/www/tasmota-ccc/devices.html
+    done
+    echo "</table></body>" >> /var/www/tasmota-ccc/devices.html
+fi
 
 bashio::log.info "Starting NGinx..."
 exec nginx -g "daemon off;"
