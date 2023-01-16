@@ -104,7 +104,7 @@ SOFTWARE.
 [github-actions-shield]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/workflows/Publish/badge.svg
 [github-actions]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/actions
 [i386-shield]: https://img.shields.io/badge/i386-no-red.svg
-[installations-shield]: https://img.shields.io/badge/dynamic/json?label=reported%20installations&query=$[%27b12a1ee6-tasmota-ccc%27].total&url=https%3A%2F%2Fanalytics.home-assistant.io%2Faddons.json
+[installations-shield]: https://img.shields.io/badge/dynamic/json?label=reported%20installations&query=$[%27b12a1ee6_tasmota_ccc%27].total&url=https%3A%2F%2Fanalytics.home-assistant.io%2Faddons.json
 [issue]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/issues
 [licence]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/blob/main/LICENSE
 [license-shield]: https://img.shields.io/github/license/lmagyar/homeassistant-addon-tasmota-ccc.svg
