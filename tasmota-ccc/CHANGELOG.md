@@ -1,6 +1,6 @@
 # Changelog
 
-## vNext
+## 0.1.3
 
 - Bump base image to 13.1.0
 
