@@ -6,24 +6,23 @@ function get_tasmota_devices() {
     {
         "template": "
             {%- set data = namespace(devices=[]) %}
-            {%- set devices = states | map(attribute='entity_id') | map('device_id') | unique | reject('eq', None) | list %}
+            {%- set devices = integration_entities('tasmota') |  map('device_id') | unique | list %}
             {%- for device in devices %}
-            {%-   if is_device_attr(device, 'manufacturer', 'Tasmota') %}
-            {%-     for connection in device_attr(device, 'connections') %}
-            {%-       if connection[0] == 'mac' %}
-            {%-         set data.devices = data.devices + [dict(
-                                id = device,
-                                url = device_attr(device, 'configuration_url'),
-                                mac = connection[1],
-                                name = device_attr(device, 'name'),
-                                model = device_attr(device, 'model'),
-                                version = device_attr(device, 'sw_version'),
-                                available = (not is_state(device_entities(device)[0], 'unavailable')),
-                                area = area_name(device_attr(device, 'area_id'))
-                            )] %}
-            {%-       endif %}
-            {%-     endfor %}
-            {%-   endif %}
+            {%-   for connection in device_attr(device, 'connections') %}
+            {%-     if connection[0] == 'mac' %}
+            {%-       set data.devices = data.devices + [dict(
+                          id = device,
+                          available = (device | device_entities | length > 0 
+                            and not is_state(device | device_entities | first, 'unavailable')),
+                          url = device_attr(device, 'configuration_url'),
+                          mac = connection[1],
+                          name = device_attr(device, 'name'),
+                          model = device_attr(device, 'model'),
+                          version = device_attr(device, 'sw_version'),
+                          area = area_name(device_attr(device, 'area_id'))
+                        )] %}
+            {%-     endif %}
+            {%-   endfor %}
             {%- endfor %}
             {{ dict(result = 'ok', data = data.devices) | tojson }}
         "
