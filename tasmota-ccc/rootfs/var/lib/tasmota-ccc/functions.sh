@@ -32,3 +32,29 @@ EOTEMPLATE
 
     bashio::api.supervisor POST /core/api/template "${template}"
 }
+
+function get_credentials() {
+    local id=${1}
+
+    jq -e ".devices[] | select(.id==\"${id}\")" /data/credentials.json
+}
+
+function delete_credentials() {
+    local id=${1}
+
+    if jq -e "del(.devices[] | select(.id==\"${1}\"))" /data/credentials.json > /data/credentials.json.tmp; then
+        rm -f /data/credentials.json
+        mv /data/credentials.json.tmp /data/credentials.json
+    fi
+}
+
+function update_credentials() {
+    local id=${1}
+    local username=${2}
+    local password=${3}
+
+    if jq -e "del(.devices[] | select(.id==\"${1}\")) | .devices += [{\"id\": \"${id}\", \"username\": \"${username}\", \"password\": \"${password}\"}]" /data/credentials.json > /data/credentials.json.tmp; then
+        rm -f /data/credentials.json
+        mv /data/credentials.json.tmp /data/credentials.json
+    fi
+}
