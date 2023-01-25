@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5
+
+- Automatically handle device authentication
+
 ## 0.1.4
 
 - Bump base image to 13.1.1
