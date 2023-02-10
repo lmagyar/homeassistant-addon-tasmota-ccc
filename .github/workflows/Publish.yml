@@ -23,8 +23,8 @@ jobs:
       uses: home-assistant/builder@2022.11.0
       with:
         args: |
-          --docker-hub ghcr.io/${{ github.actor }} \
           --${{ matrix.arch }} \
           --target tasmota-ccc \
+          --docker-hub ghcr.io/${{ github.actor }}
       env:
         CAS_API_KEY: ${{ secrets.CAS_TOKEN }}
