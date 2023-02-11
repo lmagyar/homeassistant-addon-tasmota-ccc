@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6
+
+- Allow accessing the webui of unavailable devices
+
 ## 0.1.5
 
 - Automatically handle device authentication

@@ -36,26 +36,24 @@ else
             username=$(bashio::jq "${credentials}" ".username")
             password=$(bashio::jq "${credentials}" ".password")
             encoded_credentials=$(echo -n "${username}:${password}" | base64)
-            configured="true"
+            credentials_configured="true"
         else
             encoded_credentials="null"
-            configured="false"
+            credentials_configured="false"
         fi
 
-        bashio::log.info "Configuring device ${device_attributes[id]} ${device_attributes[name]}$([[ ${device_attributes[available]} == "true" ]] || echo " (unavailable)")$([[ ${configured} == "true" ]] || echo " (unconfigured)")"
+        bashio::log.info "Configuring device ${device_attributes[id]} ${device_attributes[name]}$([[ ${device_attributes[available]} == "true" ]] || echo " (unavailable)")$([[ ${credentials_configured} == "true" ]] || echo " (unconfigured)")"
 
-        if [[ "${device_attributes[available]}" == "true" ]]; then
-            bashio::var.json \
-                id "${device_attributes[id]}" \
-                url "${device_attributes[url]}" \
-                credentials "${encoded_credentials}" \
-                | tempio \
-                    -template /etc/nginx/templates/device_proxy.gtpl \
-                    -out /etc/nginx/locations/device_proxy_"${device_attributes[id]}".conf
-        fi
+        bashio::var.json \
+            id "${device_attributes[id]}" \
+            url "${device_attributes[url]}" \
+            encoded_credentials "${encoded_credentials}" \
+            | tempio \
+                -template /etc/nginx/templates/device_proxy.gtpl \
+                -out /etc/nginx/locations/device_proxy_"${device_attributes[id]}".conf
         bashio::var.json \
             available "${device_attributes[available]}" \
-            configured "${configured}" \
+            credentials_configured "${credentials_configured}" \
             id "${device_attributes[id]}" \
             name "${device_attributes[name]}" \
             area "${device_attributes[area]}" \
