@@ -1,5 +1,9 @@
 # Changelog
 
+## vNext
+
+- Update Add-on base image to v13.2.0
+
 ## 0.1.7
 
 - Bump base image to 13.1.3
