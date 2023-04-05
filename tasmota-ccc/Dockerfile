@@ -1,12 +1,13 @@
-ARG BUILD_FROM
-FROM $BUILD_FROM
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:13.1.3
+# hadolint ignore=DL3006
+FROM ${BUILD_FROM}
 
-#Add nginx and create the run folder for nginx.
+# Setup base
 RUN \
-  apk --no-cache add \
-    nginx \
-  \
-  && mkdir -p /run/nginx
+    apk add --no-cache \
+        nginx=1.22.1-r0 \
+    \
+    && mkdir -p /run/nginx
 
 # Copy root filesystem
 COPY rootfs /
