@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7
+
+- Bump base image to 13.1.3
+- Bump base image to 13.1.2
+
 ## 0.1.6
 
 - Allow accessing the webui of unavailable devices
