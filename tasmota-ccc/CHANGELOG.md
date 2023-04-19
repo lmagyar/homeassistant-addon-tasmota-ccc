@@ -1,5 +1,9 @@
 # Changelog
 
+## vNext (forked)
+
+- Update Add-on base image to v13.2.1
+
 ## 0.1.8
 
 - Update Add-on base image to v13.2.0
