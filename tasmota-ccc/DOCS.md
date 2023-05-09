@@ -3,8 +3,6 @@
 Provides a basic proxy toward the Tasmota devices' admin interface. Device
 information comes from the Tasmota integration and not from network scanning.
 
-###TODO
-
 ## Installation
 
 Follow these steps to get the add-on installed on your system:
@@ -26,24 +24,9 @@ Follow these steps to get the add-on installed on your system:
 In case the device informations are changed, restart the add-on. Currently no
 auto-refresh is available.
 
-###TODO
-
 ## Add-on Configuration
 
 Currently there is no configuration needed.
-
-**Note**: _Remember to restart the add-on when the configuration is changed._
-
-Example add-on configuration:
-
-```yaml
-```
-
-**Note**: _This is just an example, don't copy and paste it! Create your own!_
-
-###TODO
-
-### Option: `...`
 
 ## Support
 
@@ -51,22 +34,13 @@ Got questions?
 
 You have several options to get them answered:
 
-###TODO
-<!--
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
-  support and feature requests.
-- The [Home Assistant Discord chat server][discord-ha] for general Home
-  Assistant discussions and questions.
+- The [Home Assistant Discord chat server][discord].
 - The Home Assistant [Community Forum][forum].
 - Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
--->
 
-You could also [open an issue here][issue] GitHub.
+You could also [open an issue here][issue] on GitHub.
 
+[discord]: https://discord.gg/c5DvZ4e
+[forum]: https://community.home-assistant.io/t/home-assistant-custom-add-on-tasmota-ccc/123456
 [issue]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/issues
-<!--
-[discord-ha]: https://discord.gg/###TODO
-[discord]: https://discord.me/###TODO
-[forum]: https://community.home-assistant.io/t/home-assistant-custom-add-on-tasmota-ccc/###TODO
-[reddit]: https://reddit.com/r/###TODO
--->
+[reddit]: https://reddit.com/r/homeassistant
