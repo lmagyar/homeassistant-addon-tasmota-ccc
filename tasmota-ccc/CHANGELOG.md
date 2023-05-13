@@ -2,6 +2,7 @@
 
 ## vNext (forked)
 
+- Update NGINX to v1.24.0-r3
 - Update Add-on base image to v14 (Update Alpine base image to v3.18.0)
 
 ## 0.1.9 (forked)
