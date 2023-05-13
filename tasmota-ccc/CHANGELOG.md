@@ -1,5 +1,9 @@
 # Changelog
 
+## vNext (forked)
+
+- Update Add-on base image to v14 (Update Alpine base image to v3.18.0)
+
 ## 0.1.9 (forked)
 
 - Update Add-on base image to v13.2.2
