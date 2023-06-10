@@ -20,5 +20,3 @@ jobs:
           --test \
           --${{ matrix.arch }} \
           --target tasmota-ccc
-      env:
-        CAS_API_KEY: ${{ secrets.CAS_TOKEN }}

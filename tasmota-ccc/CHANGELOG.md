@@ -1,5 +1,9 @@
 # Changelog
 
+## vNext (forked)
+
+- Sign add-on with Sigstore Cosign
+
 ## 0.1.10 (forked)
 
 - Update Add-on base image to v14 (Update Alpine base image to v3.18.0)
