@@ -1,8 +1,11 @@
 # Changelog
 
+## 0.1.11 (forked)
+
+- Sign add-on with Sigstore Cosign
+
 ## 0.1.10 (forked)
 
-- Update NGINX to v1.24.0-r3
 - Update Add-on base image to v14 (Update Alpine base image to v3.18.0)
 
 ## 0.1.9 (forked)
@@ -16,7 +19,6 @@
 ## 0.1.7
 
 - Bump base image to 13.1.3
-- Bump base image to 13.1.2
 
 ## 0.1.6
 

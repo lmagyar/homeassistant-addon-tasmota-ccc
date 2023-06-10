@@ -5,7 +5,7 @@ FROM ${BUILD_FROM}
 # Setup base
 RUN \
     apk add --no-cache \
-        nginx=1.24.0-r3 \
+        nginx=1.24.0-r6 \
     \
     && mkdir -p /run/nginx
 
