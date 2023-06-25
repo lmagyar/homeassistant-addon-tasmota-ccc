@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.13
+
+- Update Add-on base image to v14.0.2
+
 ## 0.1.12
 
 - Update Add-on base image to v14.0.1
