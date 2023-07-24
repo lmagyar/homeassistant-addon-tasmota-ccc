@@ -1,5 +1,9 @@
 # Changelog
 
+## vNext
+
+- Update Add-on base image to v14.0.5
+
 ## 0.1.13
 
 - Update Add-on base image to v14.0.2
