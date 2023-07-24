@@ -1,5 +1,5 @@
 ---
-version: 0.1.13
+version: 0.1.14
 slug: tasmota_ccc
 name: Tasmota proxy and update 
 panel_icon: mdi:home-automation
