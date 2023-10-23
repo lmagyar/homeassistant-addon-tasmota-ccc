@@ -9,10 +9,9 @@ url: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc
 image: ghcr.io/lmagyar/{arch}-addon-tasmota-ccc
 codenotary: lmagyar1973@gmail.com
 arch:
-  - armhf
-  - armv7
   - aarch64
   - amd64
+  - armv7
 map:
   - share:rw
 init: false
