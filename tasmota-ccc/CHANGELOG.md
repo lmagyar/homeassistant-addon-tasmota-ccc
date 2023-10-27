@@ -3,7 +3,7 @@
 ## vNext (forked)
 
 - Drop support for armhf & i386
-- Update Add-on base image to v14.3.0
+- Update Add-on base image to v14.3.1
 
 ## 0.1.15
 
