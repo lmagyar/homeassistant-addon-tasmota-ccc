@@ -1,11 +1,11 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:14.1.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:15.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Setup base
 RUN \
     apk add --no-cache \
-        nginx=1.24.0-r6 \
+        nginx=1.24.0-r14 \
     \
     && mkdir -p /run/nginx
 
