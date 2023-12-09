@@ -1,6 +1,10 @@
 # Changelog
 
-## 0.1.16 (forked)
+## vNext
+
+- Update Add-on base image to v15.0.1
+
+## 0.1.16
 
 - Drop support for armhf & i386
 - Update Add-on base image to v15.0.0 (Update Alpine base image to v3.19.0)
