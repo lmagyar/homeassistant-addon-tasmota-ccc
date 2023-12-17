@@ -2,7 +2,7 @@
 
 ## vNext
 
-- Update Add-on base image to v15.0.1
+- Update Add-on base image to v15.0.2
 
 ## 0.1.16
 
