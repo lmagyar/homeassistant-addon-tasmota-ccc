@@ -2,7 +2,7 @@
 
 ## vNext
 
-- Update Add-on base image to v16.3.5
+- Update Add-on base image to v17.0.0 (Update Alpine base image to v3.21.0)
 
 ## 0.1.16
 
