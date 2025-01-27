@@ -1,6 +1,11 @@
 # Changelog
 
-## 0.1.16 (forked)
+## 0.1.17
+
+- Configure log format for the add-on
+- Update Add-on base image to v17.1.0 (Update Alpine base image to v3.21)
+
+## 0.1.16
 
 - Drop support for armhf & i386
 - Update Add-on base image to v15.0.0 (Update Alpine base image to v3.19.0)
