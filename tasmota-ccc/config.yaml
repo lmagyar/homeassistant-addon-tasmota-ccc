@@ -1,7 +1,7 @@
 ---
-version: 0.1.16
+version: 0.1.17
 slug: tasmota_ccc
-name: Tasmota proxy and update 
+name: Tasmota proxy and update
 panel_icon: mdi:home-automation
 panel_title: Tasmota proxy
 description: Access and update your Tasmota devices through Home Assistant

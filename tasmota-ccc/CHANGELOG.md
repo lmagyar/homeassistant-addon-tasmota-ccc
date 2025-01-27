@@ -1,6 +1,6 @@
 # Changelog
 
-## vNext
+## 0.1.17
 
 - Configure log format for the add-on
 - Update Add-on base image to v17.1.0 (Update Alpine base image to v3.21)
