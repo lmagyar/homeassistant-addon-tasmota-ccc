@@ -2,7 +2,7 @@
 
 ## vNext
 
-- Update Add-on base image to v18.2.1 (Update Alpine base image to v3.22)
+- Update Add-on base image to v19 (Update Alpine base image to v3.22, drop armv7 support)
 - Remove deprecated codenotary fields
 
 ## 0.1.17
