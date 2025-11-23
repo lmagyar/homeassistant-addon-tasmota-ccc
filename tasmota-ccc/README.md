@@ -28,7 +28,7 @@ information comes from the Tasmota integration and not from network scanning.
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
 [commits-shield]: https://img.shields.io/github/commit-activity/y/lmagyar/homeassistant-addon-tasmota-ccc.svg
 [commits]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/commits/main
 [github-actions-shield]: https://github.com/lmagyar/homeassistant-addon-tasmota-ccc/workflows/Publish/badge.svg
