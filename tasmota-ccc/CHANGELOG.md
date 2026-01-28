@@ -3,7 +3,7 @@
 ## vNext
 
 - Drop support for armv7 architecture
-- Update Add-on base image to v19 (Update Alpine base image to v3.22, drop armv7 support)
+- Update Add-on base image to v20 (drop armv7 support)
 - Remove deprecated codenotary fields
 
 ## 0.1.17
