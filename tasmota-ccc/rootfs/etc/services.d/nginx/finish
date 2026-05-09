@@ -1,11 +1,11 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Custom Add-on: Tasmota proxy and update
+# Home Assistant Custom App: Tasmota proxy and update
 # Take down the S6 supervision tree when Nginx fails
 # ==============================================================================
 if [[ "${1}" -ne 0 ]] && [[ "${1}" -ne 256 ]]; then
-  bashio::log.warning "NGINX crashed, halting add-on"
+  bashio::log.warning "NGINX crashed, halting app"
   /run/s6/basedir/bin/halt
 fi
 

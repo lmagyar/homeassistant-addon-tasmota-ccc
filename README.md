@@ -1,5 +1,5 @@
 
-# Home Assistant Custom Add-on: Tasmota proxy and update add-on
+# Home Assistant Custom App: Tasmota proxy and update app
 
 Access and update your Tasmota devices through Home Assistant.
 
@@ -16,7 +16,7 @@ Access and update your Tasmota devices through Home Assistant.
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-![Tasmota proxy and update add-on][screenshot]
+![Tasmota proxy and update app][screenshot]
 
 ## About
 
@@ -28,14 +28,14 @@ information comes from the Tasmota integration and not from network scanning.
 1. In Home Assistant, go to **Settings** > **Apps** > **Install app**.
 2. In the **...** menu at the top right corner click **Repositories**, add
    `https://github.com/lmagyar/homeassistant-addon-tasmota-ccc` as repository.
-3. Find the "Tasmota proxy and update" add-on and click it. If it doesn't show
-   up, wait until HA refreshes the information about the add-on, or click
+3. Find the "Tasmota proxy and update" app and click it. If it doesn't show
+   up, wait until HA refreshes the information about the app, or click
    **Check for updates** in the **...** menu at the top right corner.
 4. Click on the "INSTALL" button.
 
 ## Documentation
 
-For more details, please see the add-on's [Documentation][Documentation] pages.
+For more details, please see the app's [Documentation][Documentation] pages.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg

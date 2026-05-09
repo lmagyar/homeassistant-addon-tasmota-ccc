@@ -1,4 +1,4 @@
-# Home Assistant Custom Add-on: Tasmota proxy and update add-on
+# Home Assistant Custom App: Tasmota proxy and update app
 
 Access and update your Tasmota devices through Home Assistant.
 
@@ -15,7 +15,7 @@ Access and update your Tasmota devices through Home Assistant.
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-![Tasmota proxy and update add-on][screenshot]
+![Tasmota proxy and update app][screenshot]
 
 ## About
 

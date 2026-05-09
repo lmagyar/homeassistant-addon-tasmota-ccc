@@ -14,6 +14,6 @@ COPY rootfs /
 
 # Environment variables
 ENV \
-    # Add-on log format
+    # App log format
     LOG_FORMAT="{TIMESTAMP} {LEVEL}: {MESSAGE}" \
     LOG_TIMESTAMP="%Y/%m/%d %H:%M:%S"
