@@ -1,4 +1,5 @@
-#!/usr/bin/with-contenv bashio
+#!/usr/bin/env bash
+# shellcheck shell=bash
 
 function get_tasmota_devices() {
 
@@ -12,7 +13,7 @@ function get_tasmota_devices() {
             {%-     if connection[0] == 'mac' %}
             {%-       set data.devices = data.devices + [dict(
                           id = device,
-                          available = (device | device_entities | length > 0 
+                          available = (device | device_entities | length > 0
                             and not is_state(device | device_entities | first, 'unavailable')),
                           url = device_attr(device, 'configuration_url'),
                           mac = connection[1],

@@ -1,11 +1,11 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:17.1.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:20.2.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Setup base
 RUN \
     apk add --no-cache \
-        nginx=1.26.2-r4 \
+        nginx=1.28.3-r3 \
     \
     && mkdir -p /run/nginx
 
@@ -14,6 +14,6 @@ COPY rootfs /
 
 # Environment variables
 ENV \
-    # Add-on log format
+    # App log format
     LOG_FORMAT="{TIMESTAMP} {LEVEL}: {MESSAGE}" \
     LOG_TIMESTAMP="%Y/%m/%d %H:%M:%S"
