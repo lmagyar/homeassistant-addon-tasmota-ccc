@@ -3,7 +3,7 @@
 ## vNext
 
 - Drop support for armv7 architecture
-- Update App base image to v20.1.1 (Update Alpine base image to v3.23)
+- Update App base image to v20.2.0 (Update Alpine base image to v3.23)
 - Remove deprecated codenotary fields
 
 ## 0.1.17
