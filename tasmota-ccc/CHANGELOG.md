@@ -1,5 +1,9 @@
 # Changelog
 
+## vNext
+
+- Update App base image to v21.0.1
+
 ## 0.1.19
 
 - Update App base image to v21.0.0 (Update Alpine base image to v3.24.0)
