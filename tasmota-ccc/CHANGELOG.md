@@ -2,7 +2,7 @@
 
 ## vNext
 
-- Update App base image to v21.0.1
+- Update App base image to v21.0.2
 
 ## 0.1.19
 
